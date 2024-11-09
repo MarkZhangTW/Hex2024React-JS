@@ -7,4 +7,4 @@
 2. Week 2: [第二週主線任務 (codepen.io)](https://codepen.io/markzhang/pen/MWNyxRd?editors=0012)
 3. Week 3: [第三週主線任務 (codepen.io)](https://codepen.io/markzhang/pen/bGXgedG?editors=0012)
 4. Week 4: [第四週主線任務 (codepen.io)](https://codepen.io/markzhang/pen/NWQgMQd?editors=0012)
-5. Week 5: [第五周主線任務](/week5/)
+5. Week 5: [第五周主線任務](week5/)
