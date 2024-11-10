@@ -96,7 +96,6 @@ img {
     background-color: #FAFAFA;
     border: 0;
     border-bottom: solid #00807E 1px;
-    color: #818A91;
     font-size: 16px;
     line-height: 1.375;
     padding: 8px 12px;
@@ -111,11 +110,14 @@ img {
     background-color: #FAFAFA;
     border: 0;
     border-bottom: solid #00807E 1px;
-    color: #818A91;
     font-size: 16px;
     line-height: 1.375;
     padding: 10px 10px;
     width: 73%;
+}
+
+.main .card .form .form-ticket select:invalid {
+    color: #818A91;
 }
 
 .main .card .form .form-ticket .description {
@@ -127,12 +129,15 @@ img {
     background-color: #FAFAFA;
     border: 0;
     border-bottom: solid #00807E 1px;
-    color: #818A91;
     font-size: 16px;
     line-height: 1.375;
     padding: 10px 10px;
     resize: none;
     width: 73%;
+}
+
+.main .card .form .form-ticket textarea::placeholder {
+    color: #818A91;
 }
 
 .main .card .form .form-ticket .submit {
