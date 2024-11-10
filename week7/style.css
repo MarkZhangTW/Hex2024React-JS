@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #00807E;
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    display: flex;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main>.container {
+    max-width: 950px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    @media (max-width: 768px) {
+        padding: 0;
+    }
+}
+
+.main .card {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    display: flex;
+    padding: 60px 95px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        box-shadow: none;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+.main .card div {
+    width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.main .card img {
+    margin-bottom: 21px;
+}
+
+.main .card img.logo {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.main .card .form .title {
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main .card .form .title i {
+    font-size: 20px;
+    padding-right: 6px;
+}
+
+.main .card .form hr {
+    border: 0;
+    border-top: solid #00807E 3px;
+    margin-top: 4px;
+    margin-bottom: 32px;
+}
+
+.main .card .form .form-ticket {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.main .card .form .form-ticket label {
+    font-weight: 500;
+    line-height: 1.375;
+}
+
+.main .card .form .form-ticket input {
+    background-color: #FAFAFA;
+    border: 0;
+    border-bottom: solid #00807E 1px;
+    font-size: 16px;
+    line-height: 1.375;
+    padding: 8px 12px;
+    width: 73%;
+}
+
+.main .card .form .form-ticket input::placeholder {
+    color: #818A91;
+}
+
+.main .card .form .form-ticket select {
+    background-color: #FAFAFA;
+    border: 0;
+    border-bottom: solid #00807E 1px;
+    font-size: 16px;
+    line-height: 1.375;
+    padding: 10px 10px;
+    width: 73%;
+}
+
+.main .card .form .form-ticket select:invalid {
+    color: #818A91;
+}
+
+.main .card .form .form-ticket .description {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.main .card .form .form-ticket textarea {
+    background-color: #FAFAFA;
+    border: 0;
+    border-bottom: solid #00807E 1px;
+    font-size: 16px;
+    line-height: 1.375;
+    padding: 10px 10px;
+    resize: none;
+    width: 73%;
+}
+
+.main .card .form .form-ticket textarea::placeholder {
+    color: #818A91;
+}
+
+.main .card .form .form-ticket .submit {
+    background-color: #00807E;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-left: auto;
+    padding: 10px 40px;
+    width: auto;
+}
+
+.main .card .form .form-ticket .submit:hover {
+    background-color: #004E4D;
+    cursor: pointer;
+}
+
+.location-list {
+    background-color: #F7F7F7;
+}
+
+.location-list .search {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 56px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.location-list .search div {
+    align-items: flex-start;
+    color: #818A91;
+    display: flex;
+    width: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.location-list .search select {
+    border: solid #CED4DA 1px;
+    border-radius: 4px;
+    color: inherit;
+    margin-left: auto;
+    padding: 9px 11px;
+    width: 73%;
+    @media (max-width: 768px) {
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 75%;
+    }
+}
+
+.location-list .search label {
+    padding-top: 4px;
+}
+
+.location-list .search .chart {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-bottom: -12px;
+    width: 100%;
+}
+
+.location-list .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 52px;
+    padding-bottom: 82px;
+}
+
+.location-list .cards .card-container {
+    display: flex;
+    flex-direction: column;
+    width: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 38px;
+    @media (max-width: 768px) {
+        width: 50%;
+    }
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+.location-list .cards .card {
+    background-color: #FFFFFF;
+    border: solid #DEE2E6 1px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+
+.location-list p {
+    color: #818A91;
+}
+
+.location-list .card .info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    line-height: 1.375;
+    padding: 20px;
+    position: relative;
+}
+
+.location-list .card .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.location-list .card hr {
+    border: 0;
+    border-top: solid #00807E 2px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.location-list .card .info p {
+    line-height: 1.5;
+    margin-top: 16px;
+    margin-bottom: 22px;
+}
+
+.location-list .card .ticket-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: -4px;
+}
+
+.location-list .card .ticket-info i {
+    font-size: 20px;
+    padding-right: 6px;
+}
+
+.location-list .card .remaining {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.location-list .card .price-info {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+}
+
+.location-list .card .price-info .currency {
+    font-weight: 500;
+}
+
+.location-list .card .price-info .price {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.location-list .card .location-flow {
+    background-color: #64C3BF;
+    border-radius: 0 4px 4px 0;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 8px 20px;
+    position: absolute;
+    top: -12px;
+}
+
+.location-list .card .info .star-flow {
+    background-color: #00807E;
+    border-radius: 0 4px 4px 0;
+    color: #FFFFFF;
+    line-height: 1.375;
+    padding: 5px 8px;
+    position: absolute;
+    top: -16px;
+    left: 0px;
+}

@@ -9,3 +9,4 @@
 4. Week 4: [第四週主線任務 (codepen.io)](https://codepen.io/markzhang/pen/NWQgMQd?editors=0012)
 5. Week 5: [第五周主線任務 (GitHub Pages)](https://markzhangtw.github.io/Hex2024React-JS/week5/)
 6. Week 6: [第六周主線任務 (GitHub Pages)](https://markzhangtw.github.io/Hex2024React-JS/week6/)
+7. Week 7: [第七周主線任務 (GitHub Pages)](https://markzhangtw.github.io/Hex2024React-JS/week7/)
