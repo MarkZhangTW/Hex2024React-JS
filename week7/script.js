@@ -1,5 +1,18 @@
-const travelAPIEndpoint = 'https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json';
+const travelAPIEndpoint = 'https://raw.githubusercontent.com/hexschool/js-training/main/travelAPI-lv1.json';
+
+const noFilter = '全部地區';
+
+const areaChartId = '#chart';
+const areaChartTitle = '套票地區比重';
+const areaChartOrders = ['台北', '台中', '高雄'];
+const areaChartColors = {
+  '台北': '#26BFC7',
+  '台中': '#5151D3',
+  '高雄': '#E68619'
+};
+
 let tickets = [];
+let areaChart;
 
 function initialize(tickets) {
   const locationListCards = document.querySelector('.location-list>.container>.cards');
@@ -7,6 +20,7 @@ function initialize(tickets) {
   cardContainers = tickets.map(ticket => createCardContainer(ticket));
   locationListCards.replaceChildren(...cardContainers);
   searchLabel.textContent = `本次搜尋共 ${tickets.length} 筆資料`;
+  areaChart = updateAreaChart();
 }
 
 function createCardContainer(ticketInfo) {
@@ -34,7 +48,6 @@ function createCardContainer(ticketInfo) {
   return container;
 }
 
-const noFilter = '全部地區'
 filterTickets = area => tickets.filter(ticket => ticket.area == area || area == noFilter)
 
 const searchLocation = document.querySelector('.location-list .search select');
@@ -64,7 +77,33 @@ function addFormData(formData) {
   });
 }
 
+function updateAreaChart() {
+  let areaData = {};
+  let areaCountData = [];
+  tickets.forEach(ticket => areaData[ticket.area] ? areaData[ticket.area]++ : areaData[ticket.area] = 1);
+  Object.keys(areaData).forEach(area => areaCountData.push([area, areaData[area]]));
+  areaCountData = areaCountData.sort((a, b) => areaChartOrders.indexOf(a[0]) - areaChartOrders.indexOf(b[0]));
+  return c3.generate({
+    bindto: areaChartId,
+    data: {
+      columns: areaCountData,
+      type : 'donut',
+      colors: areaChartColors,
+    },
+    donut: {
+      title: areaChartTitle,
+      label: {
+        show: false
+      },
+      width: 10
+    },
+    size: {
+      height: 200
+    }
+  });
+}
+
 axios.get(travelAPIEndpoint)
-  .then(response => response.data.data.forEach(ticket => tickets.push(ticket)))
+  .then(response => response.data.forEach(ticket => tickets.push(ticket)))
   .catch(error => console.log(error))
   .finally(() => initialize(tickets));

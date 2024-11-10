@@ -173,7 +173,7 @@ img {
 }
 
 .location-list .search div {
-    align-items: center;
+    align-items: flex-start;
     color: #818A91;
     display: flex;
     width: 33.333333%;
@@ -197,6 +197,17 @@ img {
         margin-bottom: 10px;
         width: 75%;
     }
+}
+
+.location-list .search label {
+    padding-top: 4px;
+}
+
+.location-list .search .chart {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-bottom: -12px;
+    width: 100%;
 }
 
 .location-list .cards {
